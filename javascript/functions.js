@@ -3,6 +3,7 @@ $(document).ready(function (){
 });
 
 
+
 function calcularRegraDeTres(){
 	var total = $("#total").val();
 	var valor = $("#valor").val();
