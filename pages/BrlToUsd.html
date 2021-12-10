@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>PAGE</title>
+		<title>BRL to USD</title>
 		<link href="../libs/bootstrap.min.css" rel="stylesheet" />
 		<script src="../libs/jquery-3.6.0.min.js"></script>
 		
@@ -13,7 +13,11 @@
 	<body>
 		
 		<nav class="navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="../index.html">Page</a>
+			<a class="navbar-brand" href="../index.html">Regra de Tr&ecirc;s</a>
+			<a class="navbar-brand" href="./GbToMb.html">Convers&atilde;o</a>
+			
+			
+			
 		</nav>
 		
 		<div class="container-fluid">
@@ -22,20 +26,51 @@
 				<div class="content col-md-12">
 					<div class="row">
 						<div class="col-md-5">
-							<h4>Conversão de GB para MB</h4>
+							<h4>Dolar para Real</h4>
 						</div>
 					</div>
 				
 					<div class="row" style="margin-bottom:20px;">
-						<div class="col-md-5">    						
-							<input class="form-control"  id="gb" placeholder="GB">
+						<div class="col-md-5">
+							<input class="form-control" type="number" id="usd" placeholder="Dolar">
 						</div>
 						<div class="col-md-2" style="padding:0px;padding-top:3px;" > 
 							<img class="img-seta" src="../images/seta.png"/>
 						</div>
 						<div class="col-md-5">
 							<fieldset disabled>						
-								<input class="form-control" id="mb" placeholder="MB">
+								<input class="form-control" id="brl" placeholder="Real">
+							</fieldset>
+						</div>
+
+					</div>
+					
+					<!--
+					<div class="row" style="margin-bottom:20px;">
+						<div class="col-md-12 pull-right">
+							<button type="button" class="btn btn-primary " id="btn-converter-2">Converter</button>
+						</div>
+					</div>
+					-->
+					
+					<div class="row">
+						<div class="col-md-5">
+							<h4>Real para Dolar</h4>
+						</div>
+					</div>
+					
+					
+					
+					<div class="row" style="margin-bottom:20px;">
+						<div class="col-md-5">    						
+							<input class="form-control" type="number" id="BRL" placeholder="Real">
+						</div>
+						<div class="col-md-2" style="padding:0px;padding-top:3px;" > 
+							<img class="img-seta" src="../images/seta.png"/>
+						</div>
+						<div class="col-md-5">
+							<fieldset disabled>						
+								<input class="form-control" id="USD" placeholder="Dolar">
 							</fieldset>
 						</div>
 
@@ -44,7 +79,7 @@
 					
 					<div class="row" style="margin-bottom:20px;">
 						<div class="col-md-12 pull-right">
-							<button type="button" class="btn btn-primary " id="btn-converter" >Converter</button>
+							<button type="button" class="btn btn-primary " id="btn-converter-2">Converter</button>
 						</div>
 					</div>
 				
@@ -67,7 +102,7 @@
 			</div>
 
 			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-				© 2021 Copyright:
+				&copy; 2021 Copyright:
 				<a class="text-white" href="https://github.com/YohanToledo">YohanToledo</a>
 			</div>
 		</footer>
