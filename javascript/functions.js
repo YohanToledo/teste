@@ -18,22 +18,10 @@ function calcularRegraDeTres(){
 
 function converterGb(){
 	var gb = $("#gb").val();
-	var mb = gb * 1000;
+	var mb = gb * 1024;
 	mb = mb.toLocaleString('pt-BR');
-	
-	if(gb == "" || gb == "0"){
-		$("#gb").val("0");
-		$("#mb").val(mb+"MB");
-	}
-	else if(gb.includes("GB")){
-		$("#gb").val("0");
-		$("#mb").val("0MB");
-	}
-	else{
-		$("#gb").val(gb+"GB");
-		$("#mb").val(mb+"MB");
-	}
 		
+	$("#mb").val(mb+" MB");	
 }	
 
 

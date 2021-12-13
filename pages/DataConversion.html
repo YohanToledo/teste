@@ -5,7 +5,7 @@
 		<title>Gb to Mb</title>
 		<link href="../libs/bootstrap.min.css" rel="stylesheet" />
 		<script src="../libs/jquery-3.6.0.min.js"></script>
-		
+		<script src="../libs/bootstrap.bundle.min.js"></script>
 		<link href="../stylesheet/style.css" rel="stylesheet" />		
 		<script src="../javascript/functions.js"></script>
 	</head>
@@ -13,8 +13,18 @@
 	<body>
 		
 		<nav class="navbar navbar-dark bg-dark">
-			<a class="navbar-brand" href="../index.html">Regra de Tr&ecirc;s</a>
-			<a class="navbar-brand" href="./BrlToUsd.html">R$ para U$</a>
+			<div class="dropdown">
+			  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+				Paginas
+			  </a>
+
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+			  <li><a class="dropdown-item" href="../home.html">Home</a></li>
+				<li><a class="dropdown-item" href="./RegraDeTres.html">Regra de Tr&ecirc;s</a></li>
+				<li><a class="dropdown-item" href="./CurrencyExchange.html">Convers&atilde;o de moedas</a></li>
+				<li><a class="dropdown-item" href="./DataConversion.html">Convers&atilde;o de capacidade de dados</a></li>
+			  </ul>
+			</div>
 		</nav>
 		
 		<div class="container-fluid">
@@ -29,7 +39,7 @@
 				
 					<div class="row" style="margin-bottom:20px;">
 						<div class="col-md-5">    						
-							<input class="form-control"  id="gb" placeholder="GB">
+							<input class="form-control"  type="number" id="gb" placeholder="GB">
 						</div>
 						<div class="col-md-2" style="padding:0px;padding-top:3px;" > 
 							<img class="img-seta" src="../images/seta.png"/>

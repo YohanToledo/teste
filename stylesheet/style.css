@@ -6,12 +6,13 @@ body,html{
 	background-color: /*#1C1C1C*/;
 }
 
-
-.navbar-brand{
-	margin-left:6%;
-	margin-right:6%;
+.navbar{
+	height: 10%;
 }
 
+.dropdown{
+	margin-left:10%;
+}
 
 .container-fluid{
 	max-width: 100%;
@@ -33,6 +34,7 @@ body,html{
 	max-width:60%;
 	margin-left:19%;
 }
+
 
 .img-seta{
 	width:90px; 
