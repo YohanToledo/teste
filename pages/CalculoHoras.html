@@ -2,10 +2,12 @@
 
 <html>
 	<head>
-		<title>BRL to USD</title>
+		<title>App em desenvolvimento</title>
 		<link href="../libs/bootstrap.min.css" rel="stylesheet" />
 		<script src="../libs/jquery-3.6.0.min.js"></script>
+		
 		<script src="../libs/bootstrap.bundle.min.js"></script>
+		
 		<link href="../stylesheet/style.css" rel="stylesheet" />		
 		<script src="../javascript/functions.js"></script>
 	</head>
@@ -19,9 +21,8 @@
 			  </a>
 
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			  <li><a class="dropdown-item" href="../index.html">Home</a></li>
+				<li><a class="dropdown-item" href="../index.html">Home</a></li>
 				<li><a class="dropdown-item" href="./RegraDeTres.html">Regra de Tr&ecirc;s</a></li>
-				<li><a class="dropdown-item" href="./CalculoHoras.html">Calculo de Horas</a></li>
 				<li><a class="dropdown-item" href="./CurrencyExchange.html">Convers&atilde;o de moedas</a></li>
 				<li><a class="dropdown-item" href="./DataConversion.html">Convers&atilde;o de capacidade de dados</a></li>
 			  </ul>
@@ -34,60 +35,54 @@
 				<div class="content col-md-12">
 					<div class="row">
 						<div class="col-md-5">
-							<h4>Dolar para Real</h4>
+							<h4>Calculo de Horas</h4>
 						</div>
 					</div>
 				
-					<div class="row" style="margin-bottom:20px;">
-						<div class="col-md-5">
-							<input class="form-control" type="number" id="usd" placeholder="Dolar">
-						</div>
-						<div class="col-md-2" style="padding:0px;padding-top:3px;" > 
-							<img class="img-seta" src="../images/seta.png"/>
-						</div>
-						<div class="col-md-5">
-							<fieldset disabled>						
-								<input class="form-control" id="brl" placeholder="Real">
-							</fieldset>
-						</div>
-
-					</div>
-					
 					<div class="row">
+						<div class="col-md-7 " id="input-horas">
+							<div class="row ">
+								<div class="col-md-5">
+									<input class="form-control" type="number" id="horas-0" placeholder="horas" />
+								</div>
+								<div class="col-md-1">
+									<span>:</span>
+								</div>
+								<div class="col-md-5">
+									<input class="form-control" type="number" id="mins-0" placeholder="minutos"/>
+								</div>
+							</div>
+							</br>
+							<div class="row ">
+								<div class="col-md-5">
+									<input class="form-control" type="number" id="horas-1" placeholder="horas" />
+								</div>
+								<div class="col-md-1">
+									<span>:</span>
+								</div>
+								<div class="col-md-5">
+									<input class="form-control" type="number" id="mins-1" placeholder="minutos"/>
+								</div>
+							</div>
+						</div>
+			
 						<div class="col-md-5">
-							<h4>Real para Dolar</h4>
-						</div>
-					</div>
-					
-					
-					
-					<div class="row" style="margin-bottom:20px;">
-						<div class="col-md-5">    						
-							<input class="form-control" type="number" id="BRL" placeholder="Real">
-						</div>
-						<div class="col-md-2" style="padding:0px;padding-top:3px;" > 
-							<img class="img-seta" src="../images/seta.png"/>
-						</div>
-						<div class="col-md-5">
-							<fieldset disabled>						
-								<input class="form-control" id="USD" placeholder="Dolar">
-							</fieldset>
-						</div>
-
-					</div>
-					
-					
-					<div class="row" style="margin-bottom:20px;">
-						<div class="col-md-12 pull-right">
-							<button type="button" class="btn btn-primary " id="btn-converter-2">Converter</button>
+							<div class="row">
+								<input class="form-control" type="text" id="resultado" placeholder="total"/>
+							</div>
+							</br>
+							<div class="row">
+								<div class="col-md-6">
+									<button class="btn btn-secondary form-control" id="btn-addRow" type="submit">Nova Linha</button>
+								</div>
+								
+								<div class="col-md-6">
+									<button class="btn btn-primary form-control" id="btn-somarHoras" type="submit">Calcular</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				
-					<div class="row" >
-						<span style="font-size:12px; color:red; text-align: left;">* valores aproximados (considere uma margem de erro de 0,05)</span>
-					</div>
-					
-					
 				</div>
 				
 			</div>
@@ -114,5 +109,6 @@
 		
 		
 	</body>
+	
 
 </html>

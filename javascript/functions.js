@@ -2,6 +2,8 @@ $(document).ready(function (){
 	$(document).on("click", "#btn-calcular",calcularRegraDeTres);
 	$(document).on("click", "#btn-converter",converterGb);
 	$(document).on("click", "#btn-converter-2",converterMoeda);
+	$(document).on("click", "#btn-addRow",addRow);
+	$(document).on("click", "#btn-somarHoras",somarHoras);
 });
 
 
@@ -66,3 +68,65 @@ function converterMoeda(){
 		
 }		
 	
+		function somarHoras(){
+			var horasMinutos = [];
+			
+			for(var qntInputs = 0; qntInputs < 30; qntInputs ++){
+				var horas = "horas-" + qntInputs;
+				var mins = "mins-" + qntInputs;
+				
+				horasMinutos.push({
+					Horas: $("#"+horas).val(),
+					Minutos: $("#"+mins).val()
+				})
+			}
+			
+			console.log(horasMinutos);
+
+			var contador = 0;
+			for (var i = 0; i < horasMinutos.length; i++ ){
+				if( !(typeof horasMinutos[i].Horas === 'undefined') && ! (typeof horasMinutos[i].Minutos === 'undefined')){
+					contador++;
+				}
+				
+			}
+			console.log(contador);
+			
+			console.log(horasMinutos);
+			var totalHoras = 0;
+			var totalMinutos = 0;
+			for (var i = 0; i < contador ; i++){
+				totalHoras += horasMinutos[i].Horas * 1;
+				totalMinutos += horasMinutos[i].Minutos* 1;
+			}
+			console.log("Horas: " + totalHoras);
+			console.log("Minutos: " + totalMinutos);
+			 
+			while(totalMinutos >= 60){ 
+				totalMinutos -= 60;
+				totalHoras += 1;
+			}
+			 
+			$("#resultado").val(totalHoras+" hrs " + totalMinutos+" min"); 
+			 
+		}
+		
+	var count = 1;
+		
+	function addRow(){
+		count ++;
+			$("#input-horas").append(
+				"</br>" +
+					"<div class='row '>"+
+						"<div class='col-md-5'>" +
+							"<input class='form-control' type='number' id='horas-"+count+"' placeholder='horas' />"+
+						"</div>"+
+						"<div class='col-md-1'>"+
+							"<span>:</span>"+
+						"</div>"+
+						"<div class='col-md-5'>"+
+							"<input class='form-control' type='number' id='mins-"+count+"' placeholder='minutos' />"+
+						"</div>"+
+					"</div>");
+			
+	}
