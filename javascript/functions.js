@@ -1,5 +1,6 @@
 $(document).ready(function (){
 	$(document).on("click", "#btn-calcular",calcularRegraDeTres);
+	$(document).on("click", "#btn-calcular-1",calcularRegraDeTres1);
 	$(document).on("click", "#btn-converter",converterGb);
 	$(document).on("click", "#btn-converter-2",converterMoeda);
 	$(document).on("click", "#btn-addRow",addRow);
@@ -16,6 +17,16 @@ function calcularRegraDeTres(){
 	resultado = +resultado.toFixed(2);
 	
 	$("#resultado").val(resultado +"%");	
+}
+
+function calcularRegraDeTres1(){
+	var total = $("#total-1").val();
+	var percentual = $("#resultado-1").val();
+	
+	var resultado = percentual * total / 100;
+	resultado = +resultado.toFixed(2);
+	$("#resultado-1").val(percentual);
+	$("#valor-1").val(resultado);	
 }	
 
 function converterGb(){

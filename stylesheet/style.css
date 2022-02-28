@@ -45,7 +45,7 @@ body,html{
 
 
 .img-seta{
-	width:90px; 
+	width:auto; 
 	height:15px; 
 	padding: 2px;
 	margin-right:3px;	
@@ -73,9 +73,7 @@ footer{
 	border-radius:5px;
 }
 
-#btn-calcular{
-	width:100px;
-}
+
 
 .pull-right{
 	text-align:right;
