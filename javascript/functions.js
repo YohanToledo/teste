@@ -63,12 +63,12 @@ function converterMoeda(){
 			
 			var brl = usd * dolEquBrl;
 			brl = brl.toFixed(2) ;
-			$("#brl").val(brl+" R$");
+			$("#brl").val(brl+" U$");
 			
 			
 			var USD = BRL * brlEquDol;
 			USD = USD.toFixed(2);
-			$("#USD").val(USD+" U$");
+			$("#USD").val(USD+" R$");
 			
 			
 		}
